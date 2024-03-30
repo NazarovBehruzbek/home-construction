@@ -1,0 +1,100 @@
+$globalColor: #F35825;
+$fontstyle: eurostile-extended, sans-serif;
+
+.background {
+  background-image: url("./images/backgimage.webp");
+  background-size: cover;
+  padding: 120px 0;
+  width: 100%;
+  box-sizing: border-box;
+  background-position: center;
+  position: relative;
+  z-index: -1;
+  background-attachment: fixed;
+}
+
+.background .infos {
+  position: relative;
+  width: 80%;
+  color: white;
+  text-align: center;
+  margin: 0 auto;
+  z-index: 1;
+  .back-logo{
+    width: 200px;
+    height: 130px;
+    margin: 15px 0;
+  }
+  & h2{
+    font-size: 40px;
+    width: 70%;
+    margin: 0 auto;
+  }
+  & p{
+    font-family: open-sans, sans-serif;
+    font-size: 15px;
+    letter-spacing: .05em;
+    font-style: $fontstyle;
+    padding: 20px 0;
+    line-height: 20px;
+  }
+  & h3{
+    color: $globalColor;
+    padding: 20px 0;
+  }
+}
+
+.background .back-fon {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+@media screen and (min-width: 330px) and (max-width: 600px) {
+  .background {
+    padding: 50px 0;
+   .infos {
+     .back-logo{
+       width: 150px;
+       height: 100px;
+       margin: 10px 0;
+     }
+     & h2{
+       font-size: 25px;
+       width: 90%;
+     }
+     & p{;
+       font-size: 10px;
+       padding: 15px 0;
+       line-height: 15px;
+     }
+     & h3{
+       color: $globalColor;
+       padding: 20px 0;
+     }
+   }
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 951px) {
+  .background {
+    padding: 50px 0;
+    .infos {
+      & h2{
+        font-size: 30px;
+        width: 90%;
+      }
+      & p{;
+        font-size: 18px;
+        padding: 15px 0;
+        line-height: 20px;
+      }
+      & h3{
+        color: $globalColor;
+        padding: 20px 0;
+      }
+    }
+  }
+}
+

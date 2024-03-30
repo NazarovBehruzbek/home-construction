@@ -1,0 +1,174 @@
+$globalColor: #F35825;
+$fontstyle: eurostile-extended, sans-serif;
+.projects{
+  width: 100%;
+  background-color: #F5F6F8;
+  padding: 70px 0;
+  .project-info{
+    text-align: center;
+  }
+  .pro-title{
+    color: $globalColor;
+  }
+  .text{
+    font-size: 36px;
+    line-height: 39px;
+    color: #212429;
+    font-family: $fontstyle;
+    padding: 30px 0;
+  }
+  .project-item:nth-child(1){
+    padding-bottom: 0px;
+  }
+  .project-item{
+    position: relative;
+    padding: 5px;
+    overflow: hidden;
+    .pro-img{
+      width: 100%;
+      height: 250px;
+      filter: brightness(80%)
+    }
+    .pro-img1{
+      width: 100%;
+      height: 510px;
+      filter: brightness(80%)
+    }
+    .pro-fon{
+      position: absolute;
+      top: 5px;
+      left: 3.5px;
+      width: 98.5%;
+      height: 98%;
+      background-color: rgba(0, 0, 0, 0.5);
+      opacity: 0;
+    }
+    overflow: hidden;
+  }
+
+  .message-info{
+    position: absolute;
+    left: 20px;
+    width: 90%;
+    bottom: -10%;
+    font-family: $fontstyle;
+    color: #F5F6F8;
+    font-size: 17px;
+    line-height: 25px;
+    transition: bottom 0.3s ease;
+    & h3{
+      padding: 20px;
+      font-size: 30px;
+    }
+  }
+  .mes-info{
+    position: absolute;
+    left: 20px;
+    width: 90%;
+    bottom: -27%;
+    line-height: 18px;
+    font-size: 15px;
+    font-family: $fontstyle;
+    color: #F5F6F8;
+    transition: bottom 0.3s ease;
+    & h3{
+      padding: 10px;
+      font-size: 20px;
+    }
+  }
+
+}
+.project-item:hover{
+  cursor: pointer;
+  .message-info, .mes-info{
+    bottom: 20px;
+  }
+  .pro-fon{
+    opacity: 1;
+  }
+  .message{
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+}
+.moving-text {
+  padding: 80px 0;
+}
+.text-animate {
+  display: flex;
+  justify-content: flex-start;
+  margin: 10px 0;
+}
+
+.animate-item {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: $fontstyle;
+  line-height: 1.15;
+  color: black;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: currentColor;
+  font-size: 70px;
+  margin-right: 20px;
+}
+.animate-item:hover{
+  -webkit-text-fill-color: black;
+  cursor: pointer;
+}
+.animate-item1 {
+  width: 30px;
+  height: 10px;
+  border: 1px solid black;
+  margin-top: 25px;
+  margin-right: 20px;
+}
+
+@media screen and (min-width: 330px) and (max-width: 767px) {
+  .project-item{
+    .message-info, .mes-info{
+      bottom: -100%;
+    }
+    .pro-img, .pro-img1{
+      height: 300px !important;
+    }
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .project-item{
+    .message-info{
+      bottom: -12%;
+    }
+    .mes-info{
+      bottom: -50px;
+    }
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1134px) {
+  .project-item{
+    .message-info{
+      bottom: -15%;
+    }
+    .mes-info{
+      bottom: -88px;
+    }
+  }
+}
+@media screen and (min-width: 1134px) and (max-width: 1231px) {
+  .project-item{
+    .message-info{
+      bottom: -10%;
+    }
+    .mes-info{
+      bottom: -70px;
+    }
+  }
+}
+@media screen and (min-width: 1133px) and (max-width: 1190px) {
+  .project-item{
+    .message-info{
+      bottom: -18%;
+    }
+  }
+}
+
+

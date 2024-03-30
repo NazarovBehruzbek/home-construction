@@ -1,0 +1,40 @@
+$globalColor: #F35825;
+$fontstyle: eurostile-extended, sans-serif;
+.capability{
+  padding: 100px 0;
+  & h2{
+    font-size: 40px;
+    text-align: center;
+  }
+  .cap-text{
+    padding: 30px 0;
+    font-size: 25px;
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+.cap-item{
+  width: 95%;
+  padding: 80px 30px;
+  border: 2px solid grey;
+  border-bottom: 0;
+  border-bottom: 5px solid $globalColor;
+  text-align: center;
+  height: 95%;
+  margin: 0 auto;
+  & img{
+    color: $globalColor;
+    width: 20%;
+  }
+  & h2{
+    padding: 10px 0;
+  }
+}
+@media screen and (min-width: 330px) and (max-width: 600px) {
+  .capability{
+    .cap-item{
+      padding: 50px 0;
+    }
+  }
+}

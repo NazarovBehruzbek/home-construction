@@ -1,0 +1,75 @@
+$globalColor: #F35825;
+$fontstyle: eurostile-extended, sans-serif;
+
+.news {
+  padding: 70px 0;
+
+  & h2 {
+    font-size: 30px;
+    font-family: $fontstyle;
+    color: $globalColor;
+    padding-bottom: 50px;
+  }
+}
+
+.news-item {
+  overflow: hidden;
+  height: 380px;
+  position: relative;
+}
+
+.news-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(70%);
+}
+
+.news-fon {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30%;
+  transition: background .3s ease;
+  background: linear-gradient(to bottom, rgba(243, 88, 37, 0), rgba(243, 88, 37, 0.9));
+  transform: translateY(100px);
+}
+
+.news-title {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 85%;
+  color: white;
+  font-size: 20px;
+  line-height: 25px;
+  transition: transform .5s ease;
+}
+
+
+.news-item:hover {
+  cursor: pointer;
+.news-title{
+  transform: translate(-50%,-30px);
+}
+  & img {
+    transform: scale(1.2);
+    transition: .5s all;
+  }
+  .news-fon{
+    transform: translateY(5px);
+  }
+}
+
+.swiper-horizontal > .swiper-scrollbar,
+.swiper-scrollbar.swiper-scrollbar-horizontal {
+  position: static;
+  z-index: 50;
+  height: var(--swiper-scrollbar-size, 5px);
+  width: calc(100% - 2 * var(--swiper-scrollbar-sides-offset, 1%));
+  margin: 0 auto;
+  margin-top: 30px;
+  cursor: pointer;
+
+}

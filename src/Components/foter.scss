@@ -1,0 +1,65 @@
+$globalColor: #F35825;
+$fontstyle: eurostile-extended, sans-serif;
+.foter{
+  width: 100%;
+  background-color: #F5F6F8;
+  .foter-container{
+   margin-left: 100px;
+  }
+}
+.foter-title{
+  padding-bottom: 60px;
+}
+.foter-glob{
+  display: flex;
+}
+.foter-adres{
+  display: flex;
+  width: 70%;
+}
+.foter-info{
+  width: 70%;
+}
+.foter-icon{
+  font-size: 20px;
+  color: $globalColor;
+  margin-right: 20px;
+}
+.social-network{
+  display: flex;
+  padding: 70px 0;
+  & div{
+    font-size: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+}
+.foter-form{
+  background-color: white;
+  width: 100%;
+  padding: 30px 30px;
+}
+.foter-items{
+  display: flex;
+}
+.form-item{
+  padding: 0 10px;
+  & input {
+    height: 40px;
+    background-color: #F4F4F4;
+    border: none;
+    margin-top: 10px;
+    padding: 1.1rem 1.2rem;
+    width: 100%;
+  }
+  & button {
+    background-color: $globalColor;
+    color: white;
+    width: 150px;
+    height: 40px;
+    font-size: .7rem;
+    border: none;
+    margin-top: 28px;
+    cursor: pointer;
+  }
+}
