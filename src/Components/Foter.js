@@ -158,7 +158,7 @@ function Foter(){
                         <Col lg={12}>
                             <YMaps>
                                 <div>
-                                    <Map defaultState={{ center: [55.75, 37.57], zoom: 9 }} />
+                                    <Map />
                                 </div>
                             </YMaps>
                         </Col>
