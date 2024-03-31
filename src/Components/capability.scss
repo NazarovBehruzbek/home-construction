@@ -33,8 +33,16 @@ $fontstyle: eurostile-extended, sans-serif;
 }
 @media screen and (min-width: 330px) and (max-width: 600px) {
   .capability{
+    padding: 50px 0;
     .cap-item{
       padding: 50px 0;
+      & p{
+        width: 95%;
+      }
+    }
+    .cap-text{
+      font-size: 18px;
+      width: 95%;
     }
   }
 }

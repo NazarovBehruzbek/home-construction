@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, { useState} from 'react';
 import "./foter.scss"
 import {Col, Form, Input, Row,message} from "antd";
 import axios from "axios";
@@ -9,9 +9,11 @@ import { faClock } from '@fortawesome/free-solid-svg-icons';
 import { faFacebookF } from '@fortawesome/free-brands-svg-icons';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faTelegram } from '@fortawesome/free-brands-svg-icons';
-import { YMaps, Map } from '@pbe/react-yandex-maps';
+import {YMaps, Map, Placemark} from '@pbe/react-yandex-maps';
 function Foter(){
     const [form] = Form.useForm();
+    const coordinate = [41.3383854, 69.2857248];
+
     const onFinish = (values) => {
         const telegram_bot_id = "7010723308:AAGwh3tmHS-uV-Fb-CR_TqHGniLsFGrALmw";
         const chat_id = -1002068078844;
@@ -35,25 +37,14 @@ function Foter(){
         });
     };
 
-    useEffect(() => {
-        const ymaps = window.ymaps;
-        if (ymaps) {
-            ymaps.ready(() => {
-                const map = new ymaps.Map('map', {
-                    center: [55.76, 37.64], // Moscow coordinates
-                    zoom: 10,
-                });
-            });
-        }
-    }, []);
     return(
         <section>
             <div className="foter">
+                <div className="container">
                     <Row>
-                        <Col lg={12} >
+                        <Col lg={12} md={24} xs={24} sm={24}>
                             <div className="info">
-                                <div className="foter-container">
-                                   <h2 className="foter-title">Bog'lanish</h2>
+                                    <h2 className="foter-title">Bog'lanish</h2>
                                     <div className="foter-glob">
                                         <div className="foter-adres">
                                             <div className="foter-icon">
@@ -103,67 +94,29 @@ function Foter(){
                                                 <input type="text"/>
                                             </div>
                                             <div className="form-item">
-                                               <button>Yuborish</button>
+                                                <button>Yuborish</button>
                                             </div>
                                         </div>
-                                        {/*<Form*/}
-                                        {/*    form={form}*/}
-                                        {/*    name="basic"*/}
-                                        {/*    onFinish={onFinish}*/}
-                                        {/*    autoComplete="off"*/}
-                                        {/*    footer={null}*/}
-                                        {/*    layout="inline"*/}
-                                        {/*>*/}
-                                        {/*    <Form.Item*/}
-                                        {/*        name="username"*/}
 
-                                        {/*        rules={[*/}
-                                        {/*            {*/}
-                                        {/*                required: true,*/}
-                                        {/*                message: 'sada'*/}
-                                        {/*            },*/}
-                                        {/*        ]}*/}
-                                        {/*    >*/}
-                                        {/*        <Input placeholder='asd'*/}
-                                        {/*               style={{height: '50px', backgroundColor: '#F2F2F2'}}/>*/}
-                                        {/*    </Form.Item>*/}
-
-                                        {/*    <Form.Item*/}
-                                        {/*        name="phonenumber"*/}
-                                        {/*        rules={[*/}
-                                        {/*            {*/}
-                                        {/*                required: true,*/}
-                                        {/*                message: 'asd',*/}
-                                        {/*            },*/}
-                                        {/*            {*/}
-                                        {/*                pattern: /^(\+\d{1,3})?(\d{10})$/,*/}
-                                        {/*                message: 'asda',*/}
-                                        {/*            },*/}
-                                        {/*        ]}*/}
-                                        {/*    >*/}
-                                        {/*        <Input placeholder="+998-90-866-60-51"*/}
-                                        {/*               style={{height: '50px', backgroundColor: '#F2F2F2'}}/>*/}
-                                        {/*    </Form.Item>*/}
-
-                                        {/*    <Form.Item>*/}
-                                        {/*        <button className="page4-btn" type="primary" htmlType="submit">*/}
-                                        {/*            */}
-                                        {/*        </button>*/}
-                                        {/*    </Form.Item>*/}
-                                        {/*</Form>*/}
                                     </div>
                                 </div>
-                            </div>
                         </Col>
-                        <Col lg={12}>
+                        <Col lg={12} md={24} xs={24} sm={24}>
+
                             <YMaps>
-                                <div>
-                                    <Map />
+                                <div className="map-container">
+                                    <Map
+                                        defaultState={{ center: [41.3383854, 69.2857248], zoom: 16 }}
+                                        className="map"
+                                    >
+                                        <Placemark geometry={coordinate}  options={{iconColor: '#F35825'}}/>
+                                    </Map>
                                 </div>
                             </YMaps>
                         </Col>
                     </Row>
 
+                </div>
             </div>
 
         </section>

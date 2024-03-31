@@ -124,6 +124,15 @@ $fontstyle: eurostile-extended, sans-serif;
 }
 
 @media screen and (min-width: 330px) and (max-width: 767px) {
+  .moving-text{
+    padding: 30px 0;
+    .animate-item{
+      font-size: 30px;
+    }
+    .animate-item1{
+      margin-top: 12px;
+    }
+  }
   .project-item{
     .message-info, .mes-info{
       bottom: -100%;

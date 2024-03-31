@@ -5,6 +5,9 @@ $fontstyle: eurostile-extended, sans-serif;
   padding: 0;
   box-sizing: border-box;
 }
+.foter-two-item{
+  display: flex;
+}
 
 .container {
   position: relative;
@@ -148,13 +151,16 @@ $fontstyle: eurostile-extended, sans-serif;
   color: white;
   font-size: 20px;
   text-transform: uppercase;
-
-  .line{
-    width: 100px;
+  display: flex;
+  justify-items: center;
+  & p::after{
+    content: " ";
+    display: inline-block;
+    width: 70px;
     height: 3px;
     background-color: $globalColor;
-    margin: 9px 10px;
-  }
+    margin: 4px 10px;
+}
 }
 .title{
   text-transform: uppercase;
@@ -254,6 +260,10 @@ padding: 50px 0;
 }
 
 @media screen and (max-width: 920px) {
+  .container{
+    width: 90%;
+    margin: 0 auto;
+  }
 .nav-items .nav-item{
   display: none;
 }
@@ -384,11 +394,6 @@ padding: 50px 0;
       }
     }
 
-  }
-  .since{
-    .line{
-      margin: 5px 1px;
-    }
   }
   .info {
     .container{
