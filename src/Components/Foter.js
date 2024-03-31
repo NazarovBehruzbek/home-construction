@@ -11,16 +11,16 @@ import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faTelegram } from '@fortawesome/free-brands-svg-icons';
 import {YMaps, Map, Placemark} from '@pbe/react-yandex-maps';
 function Foter(){
-    const [form] = Form.useForm();
     const coordinate = [41.3383854, 69.2857248];
 
-    const onFinish = (values) => {
-        const telegram_bot_id = "7010723308:AAGwh3tmHS-uV-Fb-CR_TqHGniLsFGrALmw";
-        const chat_id = -1002068078844;
+    const onFinish = (event) => {
+        event.preventDefault()
+        const telegram_bot_id = "7127598664:AAEXfRivlYDlHmGpewNnggFY9DWvgfZZ25o";
+        const chat_id = 6706091019;
         const url = `https://api.telegram.org/bot${telegram_bot_id}/sendMessage`;
         const method = 'POST';
-        const name = values.username;
-        const phone = values.phonenumber;
+        const name = document.getElementById("nameInput").value;
+        const phone = document.getElementById("phoneInput").value;
         const messageContent = `Ismi: ${name} \nTelefon raqami: ${phone}`;
         axios({
             url: url,
@@ -30,8 +30,8 @@ function Foter(){
                 "text": messageContent
             },
         }).then(res => {
-            // setShowModal(true)
-            form.resetFields();
+            document.getElementById("myForm").reset();
+            message.success("Muvaffaqiyatli yuborildi")
         }).catch(error => {
             message.error("Xatolik");
         });
@@ -84,32 +84,44 @@ function Foter(){
                                         <div><FontAwesomeIcon icon={faTelegram}/></div>
                                     </div>
                                     <div className="foter-form">
-                                        <div className="foter-items">
-                                            <div className="form-item">
-                                                <p>Ismingiz</p>
-                                                <input type="text"/>
+                                        <form onSubmit={onFinish} id="myForm">
+                                            <div className="foter-items">
+                                                <div className="form-item">
+                                                    <p>Ismingiz</p>
+                                                    <input
+                                                        id="nameInput"
+                                                        type="text"
+                                                        required
+                                                        name="name"
+                                                        placeholder="Ismingizni kiriting"
+                                                    />
+                                                </div>
+                                                <div className="form-item">
+                                                    <p>Telefon raqam</p>
+                                                    <input
+                                                        id="phoneInput"
+                                                        type="text"
+                                                        required
+                                                        placeholder="+998908666051"
+                                                    />
+                                                </div>
+                                                <div className="form-item">
+                                                    <button type="submit">Yuborish</button>
+                                                </div>
                                             </div>
-                                            <div className="form-item">
-                                                <p>Telefon raqam</p>
-                                                <input type="text"/>
-                                            </div>
-                                            <div className="form-item">
-                                                <button>Yuborish</button>
-                                            </div>
-                                        </div>
-
+                                        </form>
                                     </div>
-                                </div>
+                            </div>
                         </Col>
                         <Col lg={12} md={24} xs={24} sm={24}>
 
                             <YMaps>
                                 <div className="map-container">
                                     <Map
-                                        defaultState={{ center: [41.3383854, 69.2857248], zoom: 16 }}
+                                        defaultState={{center: [41.3383854, 69.2857248], zoom: 16}}
                                         className="map"
                                     >
-                                        <Placemark geometry={coordinate}  options={{iconColor: '#F35825'}}/>
+                                        <Placemark geometry={coordinate} options={{iconColor: '#F35825'}}/>
                                     </Map>
                                 </div>
                             </YMaps>
