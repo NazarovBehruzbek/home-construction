@@ -1,20 +1,19 @@
 import React  from "react";
+import {useTranslation} from "react-i18next";
 
 function Component1(){
+    const {t} = useTranslation()
     return(
         <section>
             <div className="info">
                 <div className="container">
                     <div className="stick"></div>
-                    <h2 className="sub-title">HomeBuild Construction Group: Building Partnerships.</h2>
+                    <h2 className="sub-title">{t('page1.title')}</h2>
                     <p className="sub-text">
-                        Home Build Construction is a trustworthy and affordable building contractor company in the Cape Town area.
-                        We specialize in kitchen, bathroom & home renovations, although we have a vast experience in the home developments and do take on a variety of renovation & construction projects.
-                        With over 20 years experience in the industry,  you can trust that we have the knowledge and expertise to take on your project and deliver quality results at an affordable price.
-                        Get in touch today to receive your free estimate.
+                        {t('page1.text')}
                     </p>
                     <h3 className="sub-partner">
-                        We are proud of your cooperation with us
+                        {t('page1.partner')}
                     </h3>
 
                 </div>

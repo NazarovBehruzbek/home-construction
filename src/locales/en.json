@@ -1,0 +1,92 @@
+{
+  "header": {
+    "menu1": "MAIN",
+    "menu2": "PROJECTS",
+    "menu3": "NEWS",
+    "menu4": "ABOUT US",
+    "menu5": "CAPABILITIES",
+    "menu6": "CONNECT"
+  },
+  "video": {
+    "since": "since 1990",
+    "title1": "complete",
+    "title2": "construction",
+    "title3": "services",
+    "work": "see our work",
+    "join": "join our team"
+  },
+  "page1": {
+    "title": "HomeBuild Construction Group: Building Partnerships.",
+    "text": " Home Build Construction is a trustworthy and affordable building contractor company in the Cape Town area.  We specialize in kitchen, bathroom & home renovations, although we have a vast experience in the home developments and do take on a variety of renovation & construction projects.  With over 20 years experience in the industry,  you can trust that we have the knowledge and expertise to take on your project and deliver quality results at an affordable price.  Get in touch today to receive your free estimate.",
+    "partner": " We are proud of your cooperation with us"
+  },
+  "projects": {
+    "title": "Projects",
+    "text": "  Residential Homes to Large Commercial Projects",
+    "project1": {
+      "title": "Commercial",
+      "text": "HouseBuilding perform commercial and residential Framing, Building Envelope and Rough and Finish Carpentry to suit project requirements."
+    },
+    "project2": {
+      "title1": "Okanagan",
+      "title2": "Multi-Family Residential",
+      "title3": "University",
+      "title4": "Single Family Residential",
+      "text": "HouseBuilding perform commercial and residential Framing, Building Envelope and Rough and Finish Carpentry to suit project\n requirements."
+    }
+  },
+  "backg": {
+    "title": "Join Our Growing Commercial General Contractor Team",
+    "text": " In the ever-changing construction industry, we are proud to offer competitive benefits along with an educational allowance to help employees continue to learn and develop. We strive to create a work environment where relationships are valued and each team member is treated with trust and respect. We serve as a general contractor for commercial construction projects in \"all regions of Uzbekistan\".",
+    "more": "LEARN MORE ABOUT CAREER OPPORTUNITIES"
+  },
+  "about": {
+    "title": " WHO WE ARE",
+    "text": " The largest house building and repair leader in Uzbekistan",
+    "subText": " At HouseBuild we specialize in retrofit construction insulation and acoustic ceilings for commercial and residential projects.For 30 years we have prided ourselves on high quality workmanship at competitive prices while meeting strict deadlines.",
+    "more": "Learn more"
+  },
+  "news": {
+    "title": "Company news",
+    "title1": "The construction company wishes everyone a happy new year 2023!",
+    "title2": "The day when the Consitituon of the Republic of Uzbekistan was adopted",
+    "title3": "Who is the project manager of construction?"
+  },
+  "capability": {
+    "title": "The HomeBuild Philosophy",
+    "text": "As a construction partner, we believe that a knowledgeable, healthy, and engaged team will deliver a superior end-product for our clients who put their trust in us.",
+    "card1": {
+      "title": "HIGH QUALITY",
+      "text": "We’ve  worked hard to earn and maintain our reputation for quality work, and we’ve enjoyed ongoing relationships with repeat clients as a result. With our team of skilled and experienced personnel,plus our prequalified trade partners and suppliers, each project is held to the highest standards."
+    },
+    "card2": {
+      "title": "ON BUDGET",
+      "text": "Our unrivaled preconstruction services, combined with our years of experience as a Springfield-based general contractor, ensure each project begins with a budget that is accurate, comprehensive, and complete. We remain committed to staying on budget throughout the design and construction process."
+    },
+    "card3": {
+      "title": "ON SCHEDULE",
+      "text": " Completing projects on or ahead of schedule is our standard, one that we’re able to maintain through communication and clarity at every stage, for every stakeholder. With our weekly meetings and look-ahead schedules, we make sure each project stays on track as a general contractor in Tashkent, Kashkadarya."
+    },
+    "card4": {
+      "title": "COMMITTED TO SAFETY",
+      "text": "Safety is a priority for us, because it’s good for business and it’s also the right thing to do. All employees and trade partners abide by an extensive safety plan. Safety remains a priority throughout a project with weekly meetings and documented daily inspections as a general contractor in Tashkent."
+    },
+    "card5": {
+      "title": "RELATIONSHIP FOCUSED",
+      "text": "Relationships are the cornerstone of our business. The quality of our work, low turnover, and high rate of return customers are all a reflection of how we value and respect our employees, trade partners, design consultants, and clients as a  general contractor in Tashkent."
+    }
+  },
+  "foter": {
+    "title": "Connect",
+    "addressT": "Address",
+    "address": "Uzbekistan, Tashkent, National park Uzbekistana name Alishera Navoi",
+    "phone": "Phone",
+    "work": "Working time",
+    "formName": "Name",
+    "pnumber": "Phone Number",
+    "send": "Send",
+    "succes": "Sent successfully",
+    "error": "Error"
+  }
+}
+

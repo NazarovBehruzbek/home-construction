@@ -7,16 +7,18 @@ import university from "./images/insitutional.jpg";
 import singlehouse from "./images/singlehouse.jpg";
 import Marquee from "react-fast-marquee";
 import "../Components/project.scss"
+import {useTranslation} from "react-i18next";
 
 function Component2() {
+    const {t} = useTranslation()
     return (
         <section>
             <div className="projects">
                 <div className="container">
                     <div className="project-info">
-                        <h2 className="pro-title">PROJECTS</h2>
+                        <h2 className="pro-title">{t('projects.title')}</h2>
                         <p className="text">
-                            Residential Homes to Large Commercial Projects
+                            {t('projects.text')}
                         </p>
                     </div>
                     <Row>
@@ -25,9 +27,8 @@ function Component2() {
                                 <img src={commercial} alt="Error" className="pro-img1"/>
                                 <div className="pro-fon"></div>
                                 <div className="message-info">
-                                    <h3>Commercial</h3>
-                                    <p>HouseBuilding perform commercial and residential Framing, Building Envelope and
-                                        Rough and Finish Carpentry to suit project requirements.</p>
+                                    <h3>{t('projects.project1.title')}</h3>
+                                    <p>{t('projects.project1.text')}</p>
                                 </div>
 
                             </div>
@@ -39,10 +40,8 @@ function Component2() {
                                         <img src={unisesdormitory} alt="Error" className="pro-img"/>
                                         <div className="pro-fon"></div>
                                         <div className="mes-info">
-                                            <h3>Okanagan</h3>
-                                            <p>HouseBuilding perform commercial and residential Framing, Building
-                                                Envelope and Rough and Finish Carpentry to suit project
-                                                requirements.</p>
+                                            <h3>{t('projects.project2.title1')}</h3>
+                                            <p>{t('projects.project1.text')}</p>
                                         </div>
                                     </div>
                                 </Col>
@@ -51,9 +50,8 @@ function Component2() {
                                         <img src={multifamily} alt="Error" className="pro-img"/>
                                         <div className="pro-fon"></div>
                                         <div className="mes-info">
-                                            <h3>Multi-Family Residential</h3>
-                                            <p>HouseBuilding commercial and residential Framing, Building Envelope and
-                                                Rough and Finish Carpentry to suit project requirements.</p>
+                                            <h3>{t('projects.project2.title2')}</h3>
+                                            <p>{t('projects.project1.text')}</p>
                                         </div>
                                     </div>
                                 </Col>
@@ -62,10 +60,8 @@ function Component2() {
                                         <img src={university} alt="Error" className="pro-img"/>
                                         <div className="pro-fon"></div>
                                         <div className="mes-info">
-                                            <h3>Institutional</h3>
-                                            <p>HouseBuilding perform commercial and residential Framing, Building
-                                                Envelope and Rough and Finish Carpentry to suit project
-                                                requirements.</p>
+                                            <h3>{t('projects.project2.title3')}</h3>
+                                            <p>{t('projects.project1.text')}</p>
                                         </div>
                                     </div>
                                 </Col>
@@ -74,10 +70,8 @@ function Component2() {
                                         <img src={singlehouse} alt="Error" className="pro-img"/>
                                         <div className="pro-fon"></div>
                                         <div className="mes-info">
-                                            <h3>Single Family Residential</h3>
-                                            <p>HouseBuilding perform commercial and residential Framing, Building
-                                                Envelope and Rough and Finish Carpentry to suit project
-                                                requirements.</p>
+                                            <h3>{t('projects.project2.title4')}</h3>
+                                            <p>{t('projects.project1.text')}</p>
                                         </div>
                                     </div>
                                 </Col>

@@ -8,13 +8,15 @@ import { FreeMode, Pagination,Scrollbar } from 'swiper/modules';
 import yangiyil from "./images/newyear.png";
 import zakon from "./images/zakon.png";
 import qurilish from "./images/qurilish.webp";
+import {useTranslation} from "react-i18next";
 
 function News(){
+    const {t} = useTranslation()
     return(
         <section>
             <div className="news">
                 <div className="container">
-                    <h2>Kompaniya yangiliklari</h2>
+                    <h2>{t('news.title')}</h2>
                     <Swiper
                         slidesPerView={3}
                         spaceBetween={30}
@@ -43,28 +45,28 @@ function News(){
                             <div className="news-item">
                                 <img src={yangiyil} alt="Error"/>
                                 <div className="news-fon"></div>
-                                <p className="news-title">Home build kompaniyasi hammani yangi 2023-yil bilan qutlaydi!</p>
+                                <p className="news-title">{t('news.title1')}</p>
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
                             <div className="news-item">
                                 <img src={zakon} alt="Error"/>
                                 <div className="news-fon"></div>
-                                <p className="news-title">Home build kompaniyasi hammani yangi 2023-yil bilan qutlaydi!</p>
+                                <p className="news-title">{t('news.title2')}</p>
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
                             <div className="news-item">
                                 <img src={qurilish} alt="Error"/>
                                 <div className="news-fon"></div>
-                                <p className="news-title">Qurilish loyihasining mutaxassisi deb kimni atash mumkin?</p>
+                                <p className="news-title">{t('news.title3')}</p>
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
                             <div className="news-item">
                                 <img src={yangiyil} alt="Error"/>
                                 <div className="news-fon"></div>
-                                <p className="news-title">Home build kompaniyasi hammani yangi 2023-yil bilan qutlaydi!</p>
+                                <p className="news-title">{t('news.title1')}</p>
                             </div>
                         </SwiperSlide>
                     </Swiper>

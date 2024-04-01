@@ -4,8 +4,10 @@ import {Col, Row} from "antd";
 import whoimg1 from "./images/who-img1.jpg"
 import whoimg2 from "./images/who-img2.jpg"
 import whoimg3 from "./images/who-img3.jpg"
+import {useTranslation} from "react-i18next";
 
 function Component4(){
+    const {t} = useTranslation()
     return(
         <section>
             <div className="who-back">
@@ -13,20 +15,11 @@ function Component4(){
                     <Col lg={12} md={24}  xs={24}>
                         <div className="who-info">
                             <div className="container">
-                                <h2 className="who-title">WHO WE ARE</h2>
+                                <h2 className="who-title">{t('about.title')}</h2>
                                 <div className="stick"></div>
-                                <h2 className="sub-title">The largest house building and repair leader in
-                                    Uzbekistan</h2>
-                                <p className="sub-text">
-                                    At HouseBuild we specialize in retrofit construction insulation and acoustic
-                                    ceilings for commercial and residential projects.
-                                    For 30 years we have prided ourselves on high quality workmanship at competitive
-                                    prices while meeting strict deadlines.
-                                </p>
-                                <h3 className="sub-partner">
-                                    Learn more
-                                </h3>
-
+                                <h2 className="sub-title">{t('about.text')}</h2>
+                                <p className="sub-text">{t('about.subText')}</p>
+                                <h3 className="sub-partner">{t('about.more')}</h3>
                             </div>
                         </div>
 

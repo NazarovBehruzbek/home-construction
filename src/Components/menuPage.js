@@ -6,16 +6,22 @@ import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import {Drawer, Select} from "antd";
+import {useTranslation} from "react-i18next";
 
 function MenuPage() {
     const [open, setOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
+    const { t, i18n } = useTranslation();
 
     const showDrawer = () => {
         setOpen(true);
     };
     const onClose = () => {
         setOpen(false);
+    };
+    const handleChange = (selectedOption) => {
+        const selectedLanguage = selectedOption.value;
+        i18n.changeLanguage(selectedLanguage);
     };
     useEffect(() => {
         const handleScroll = () => {
@@ -40,36 +46,28 @@ function MenuPage() {
                             <img src={logo} alt="Error" className="logo"/>
                         </li>
                         <div className="nav-items">
-                            <li className="nav-item">PROJECTS</li>
-                            <li className="nav-item">WHO WE ARE</li>
-                            <li className="nav-item">CAPABILITIES</li>
-                            <li className="nav-item">NEWS</li>
-                            <li className="nav-item">VIDEOS</li>
+                            <li className="nav-item">{t('header.menu1')}</li>
+                            <li className="nav-item">{t('header.menu2')}</li>
+                            <li className="nav-item">{t('header.menu3')}</li>
+                            <li className="nav-item">{t('header.menu4')}</li>
+                            <li className="nav-item">{t('header.menu5')}</li>
                             <li className="nav-item">
                                 <Select
                                     labelInValue
                                     defaultValue={{
-                                        value: 'uzbek',
-                                        label: 'Uzbek',
+                                        value: i18n.language,
+                                        label: i18n.language,
                                     }}
-                                    style={{
-                                        width: 100,
-                                        color: 'black',
-                                    }}
+                                    style={{ width: 100, color: 'black' }}
+                                    onChange={handleChange}
                                     options={[
-                                        {
-                                            value: 'uzbek',
-                                            label: 'Uzbek',
-                                        },
-                                        {
-                                            value: 'english',
-                                            label: 'English',
-                                        },
+                                        { value: 'uzbek', label: 'Uzbek', },
+                                        { value: 'english', label: 'English', },
                                     ]}
                                 />
 
                             </li>
-                            <li className="nav-item contact">CONTACT</li>
+                            <li className="nav-item contact">{t('header.menu6')}</li>
                             <li onClick={showDrawer} className="sidebar"><FontAwesomeIcon icon={faBars}/></li>
                         </div>
                     </ul>
@@ -82,18 +80,18 @@ function MenuPage() {
                 </video>
                 <div className="nav-container">
                     <div className="since">
-                        <p>Sinse 1990</p>
+                        <p>{t('video.since')}</p>
                         <div className="line"></div>
                     </div>
                     <h1 className="title" >
-                        COMPLETE <span className="title1">CONSTRUCTION</span> SERVICES
+                        {t('video.title1')} <br/> <span className="title1">{t('video.title2')}</span> {t('video.title3')}
                     </h1>
                     <div className="see">
-                        <p className="see-item">SEE OUR WORK
+                        <p className="see-item">{t('video.work')}
                             <span className="icon-right"><FontAwesomeIcon icon={faChevronRight}/></span>
                             <span className="icon-right"><FontAwesomeIcon icon={faChevronRight}/></span>
                         </p>
-                        <p className="see-item">JOIN OUR TEAM
+                        <p className="see-item">{t('video.join')}
                             <span className="icon-right"><FontAwesomeIcon icon={faChevronRight}/></span>
                             <span className="icon-right"><FontAwesomeIcon icon={faChevronRight}/></span>
                         </p>
@@ -108,36 +106,27 @@ function MenuPage() {
                     </div>
                 </div>
                 <Drawer className="custom-drawer" onClose={onClose} open={open}>
-                    <div className="sub-menu-item">PROJECTS</div>
-                    <div className="sub-menu-item">PROJECTS</div>
-                    <div className="sub-menu-item">WHO WE ARE</div>
-                    <div className="sub-menu-item">CAPABILITIES</div>
-                    <div className="sub-menu-item">NEWS</div>
-                    <div className="sub-menu-item">VIDEOS</div>
+                    <div className="sub-menu-item">{t('header.menu1')}</div>
+                    <div className="sub-menu-item">{t('header.menu2')}</div>
+                    <div className="sub-menu-item">{t('header.menu3')}</div>
+                    <div className="sub-menu-item">{t('header.menu4')}</div>
+                    <div className="sub-menu-item">{t('header.menu5')}</div>
                     <div className="sub-menu-item">
                         <Select
                             labelInValue
                             defaultValue={{
-                                value: 'uzbek',
-                                label: 'Uzbek',
+                                value: i18n.language,
+                                label: i18n.language,
                             }}
-                            style={{
-                                width: 100,
-                                color: 'black',
-                            }}
+                            style={{ width: 100, color: 'black' }}
+                            onChange={handleChange}
                             options={[
-                                {
-                                    value: 'uzbek',
-                                    label: 'Uzbek',
-                                },
-                                {
-                                    value: 'english',
-                                    label: 'English',
-                                },
+                                { value: 'uzbek', label: 'Uzbek', },
+                                { value: 'english', label: 'English', },
                             ]}
                         />
                     </div>
-                    <div className="sub-menu-item contact">CONTACT</div>
+                    <div className="sub-menu-item contact">{t('header.menu6')}</div>
                 </Drawer>
             </div>
         </section>

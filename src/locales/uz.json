@@ -1,0 +1,92 @@
+{
+  "header": {
+    "menu1": "ASOSIY",
+    "menu2": "PROYEKTLAR",
+    "menu3": "YANGILIKLAR",
+    "menu4": "BIZ HAQIMIZDA",
+    "menu5": "IMKONIYATLAR",
+    "menu6": "BOG'LANISH"
+  },
+  "video": {
+    "since": "1990 - yildan",
+    "title1": "To'liq",
+    "title2": "qurilish",
+    "title3": "xizmatlari",
+    "work": "Bizning ishlar",
+    "join": "Jamoaga qo'shiling"
+  },
+  "page1": {
+    "title": "HomeBuild Qurilish Kompaniyasi: Qurilish hamkorlari",
+    "text": "HomeBuild Qurilish Kompaniyasi - O'zbekiston hududidagi ishonchli va arzon qurilish pudratchi kompaniyasi. Biz oshxona, hammom va uyni ta'mirlash bo'yicha ixtisoslashganmiz, garchi biz uyni rivojlantirish bo'yicha katta tajribaga egamiz va turli xil ta'mirlash va qurilish loyihalarini o'z zimmamizga olamiz. Sohada 20 yildan ortiq tajribaga ega bo'lgan holda, biz sizning loyihangizni qabul qilish va arzon narxlarda sifatli natijalarni taqdim etish uchun bilim va tajribaga ega ekanligimizga ishonishingiz mumkin. Bepul smetangizni olish uchun bugun bog'laning.",
+    "partner": " Biz bilan hamkorligingizdan faxrlanamiz"
+  },
+  "projects": {
+    "title": "Proyektlar",
+    "text": "  Uy-joylardan yirik tijorat loyihalariga",
+    "project1": {
+      "title": "Tijorat",
+      "text": "Uy qurilishi loyiha talablariga muvofiq tijorat va turar-joy qurilishi, qurilish konvertlari va qo'pol va pardozlash ishlarini bajaradi."
+    },
+    "project2": {
+      "title1": "Okanagan",
+      "title2": "Ko'p oilali turar joy",
+      "title3": "Universitet",
+      "title4": "Bir oilali turar joy"
+    }
+  },
+  "backg": {
+    "title": "Bizning o'sib borayotgan tijorat bosh pudratchi jamoamizga qo'shiling",
+    "text": " Har doim o'zgarib turadigan qurilish sanoatida biz xodimlarga o'rganish va rivojlanishda davom etishlariga yordam berish uchun ta'lim to'lovlari bilan birga raqobatbardosh imtiyozlarni taklif qilishdan faxrlanamiz. Biz munosabatlar qadrlanadigan va har bir jamoa a'zosiga ishonch va hurmat bilan munosabatda bo'ladigan ish muhitini yaratishga intilamiz. Biz “O‘zbekistonning barcha hududlarida” tijorat qurilish loyihalari bo‘yicha bosh pudratchi sifatida xizmat qilamiz..",
+    "more": "KARYERA IMKONIYATLARI HAQIDA KO'PROQ MA'LUMOT OLING"
+  },
+    "about": {
+        "title": " Biz haqimizda",
+        "text": " O'zbekistondagi eng yirik uy-joy qurish va ta'mirlash rahbari",
+        "subText": "HouseBuild-da biz tijorat va turar-joy loyihalari uchun qurilish izolyatsiyasi va akustik shiftini qayta jihozlashga ixtisoslashganmiz. 30 yil davomida biz qat'iy belgilangan muddatlarga rioya qilgan holda raqobatbardosh narxlarda yuqori sifatli mahorat bilan faxrlanamiz.",
+        "more": "Batafsil ma'lumot"
+    },
+    "news": {
+        "title": "Kompaniya yangiliklari",
+        "title1": "Home build kompaniyasi hammani yangi 2023-yil bilan qutlaydi!",
+        "title2": "O'zbekiston Respublikasi Konstitutsiyasi qabul qilingan kun",
+        "title3": "Qurilish loyihasining mutaxassisi deb kimni atash mumkin?"
+    },
+    "capability": {
+        "title": "The HomeBuild Filosofiyai",
+        "text": "Qurilish bo'yicha hamkor sifatida biz bilimli, sog'lom va ishchan jamoa bizga ishongan mijozlarimiz uchun yuqori darajadagi yakuniy mahsulotni yetkazib berishiga ishonamiz.",
+        "card1": {
+            "title": "YUQORI SIFAT",
+            "text": "Biz sifatli ish uchun obro'-e'tiborimizni qozonish va saqlab qolish uchun ko'p mehnat qildik va buning natijasida takroriy mijozlar bilan davomiy munosabatlardan zavq oldik. Bizning malakali va tajribali xodimlarimiz, shuningdek, oldindan malakali savdo hamkorlarimiz va yetkazib beruvchilarimiz bilan har bir loyiha eng yuqori standartlarga muvofiq amalga oshiriladi."
+        },
+        "card2": {
+            "title": "BUDJET",
+            "text": "Toshkentda joylashgan bosh pudratchi sifatidagi ko'p yillik tajribamiz bilan birgalikda bizning tengsiz qurilishgacha bo'lgan xizmatlarimiz har bir loyihaning to'g'ri, keng qamrovli va to'liq byudjet bilan boshlanishini ta'minlaydi. Biz loyihalash va qurilish jarayonida byudjetdan foydalanishga sodiqmiz."
+        },
+        "card3": {
+            "title": "JADVAL BO'YICHA",
+            "text": "Loyihalarni muddatidan oldin yoki muddatidan oldin yakunlash bizning standartimiz bo'lib, biz uni har bir bosqichda, har bir manfaatdor tomon uchun aloqa va ravshanlik orqali saqlab qolishimiz mumkin. Haftalik uchrashuvlarimiz va istiqbolli rejalarimiz bilan biz har bir loyiha Toshkent va Qashqadaryoda bosh pudratchi sifatida o‘z yo‘lida qolishiga ishonch hosil qilamiz."
+        },
+        "card4": {
+            "title": "XAVFSIZLIK VA SOG'LIK",
+            "text": "Xavfsizlik biz uchun ustuvor ahamiyatga ega, chunki bu biznes uchun foydali va bu ham to'g'ri ish. Barcha xodimlar va savdo hamkorlari keng qamrovli xavfsizlik rejasiga rioya qilishadi. Toshkentdagi bosh pudratchi sifatida haftalik uchrashuvlar va hujjatlashtirilgan kundalik tekshiruvlar bilan loyiha davomida xavfsizlik ustuvorligicha qolmoqda."
+        },
+        "card5": {
+            "title": "E'TIBORLI MUNOSABAT",
+            "text": "Aloqalar bizning biznesimizning asosidir. Ishimizning sifati, past aylanmasi va mijozlarning yuqori daromadliligi bizning Toshkentdagi bosh pudratchi sifatida xodimlarimiz, savdo hamkorlarimiz, dizayn bo‘yicha maslahatchilar va mijozlarimizni qanchalik qadrlashimiz va hurmat qilishimizdan dalolat beradi."
+        }
+    },
+  "foter": {
+    "title": "Bog'lanish",
+    "addressT": "Manzil",
+    "address": "Uzbekistan, Tashkent, Alishera Navoiy nomidagi Oʻzbekiston milliy bogʻi",
+    "phone": "еудуащт",
+    "work": "Ish vaqti",
+    "formName": "Ismingiz",
+    "pnumber": "Telefon raqam",
+    "send": "Yuborish",
+    "succes": "Muvaffaqiyatli yuborildi",
+    "error": "Xatolik"
+  }
+}
+
+
