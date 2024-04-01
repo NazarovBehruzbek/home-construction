@@ -41,7 +41,7 @@ function Foter(){
 
     return(
         <section>
-            <div className="foter">
+            <div className="foter" id="connect">
                 <div className="container">
                     <Row>
                         <Col lg={12} md={24} xs={24} sm={24}>

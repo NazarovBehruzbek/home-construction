@@ -22,8 +22,8 @@ function App() {
     }, [])
     return (
         <React.Fragment>
-            <MenuPage/>
-            <Component1/>
+            <MenuPage />
+            <Component1 />
             <Component2/>
             <Component3/>
             <News/>

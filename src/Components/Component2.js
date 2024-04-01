@@ -13,7 +13,7 @@ function Component2() {
     const {t} = useTranslation()
     return (
         <section>
-            <div className="projects">
+            <div className="projects" id="projects">
                 <div className="container">
                     <div className="project-info">
                         <h2 className="pro-title">{t('projects.title')}</h2>

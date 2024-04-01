@@ -10,7 +10,7 @@ function Component4(){
     const {t} = useTranslation()
     return(
         <section>
-            <div className="who-back">
+            <div className="who-back" id="about">
                 <Row>
                     <Col lg={12} md={24}  xs={24}>
                         <div className="who-info">

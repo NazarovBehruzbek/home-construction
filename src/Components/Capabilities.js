@@ -12,7 +12,7 @@ function Capabilities(){
     const {t} = useTranslation()
     return(
         <section>
-            <div className="capability">
+            <div className="capability" id="capability">
                 <div className="container">
                     <h2>{t('capability.title')}</h2>
                     <p className="cap-text">{t('capability.text')}</p>

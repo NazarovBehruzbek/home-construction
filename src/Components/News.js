@@ -14,7 +14,7 @@ function News(){
     const {t} = useTranslation()
     return(
         <section>
-            <div className="news">
+            <div className="news" id="news">
                 <div className="container">
                     <h2>{t('news.title')}</h2>
                     <Swiper

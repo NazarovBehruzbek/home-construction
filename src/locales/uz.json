@@ -52,7 +52,7 @@
         "title3": "Qurilish loyihasining mutaxassisi deb kimni atash mumkin?"
     },
     "capability": {
-        "title": "The HomeBuild Filosofiyai",
+        "title": "The HomeBuild Filosofiyasi",
         "text": "Qurilish bo'yicha hamkor sifatida biz bilimli, sog'lom va ishchan jamoa bizga ishongan mijozlarimiz uchun yuqori darajadagi yakuniy mahsulotni yetkazib berishiga ishonamiz.",
         "card1": {
             "title": "YUQORI SIFAT",
@@ -79,7 +79,7 @@
     "title": "Bog'lanish",
     "addressT": "Manzil",
     "address": "Uzbekistan, Tashkent, Alishera Navoiy nomidagi Oʻzbekiston milliy bogʻi",
-    "phone": "еудуащт",
+    "phone": "Telefon",
     "work": "Ish vaqti",
     "formName": "Ismingiz",
     "pnumber": "Telefon raqam",

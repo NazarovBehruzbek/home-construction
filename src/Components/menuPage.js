@@ -37,8 +37,21 @@ function MenuPage() {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
+        const handleMenuClick = (sectionId) => {
+            const section = document.getElementById(sectionId);
+            const menuHeight = document.querySelector('.nav').offsetHeight;
+
+            if (section) {
+                const offset = section.offsetTop - menuHeight;
+                window.scrollTo({
+                    top: offset,
+                    behavior: "smooth",
+                });
+            }
+            setOpen(false)
+        };
     return (
-        <section style={{position:'relative'}}>
+        <section style={{position:'relative'}} id="main-section">
             <div className={`nav ${scrolled ? 'scrolled' : ''}`}>
                 <div className="container">
                     <ul className="nav-list">
@@ -46,11 +59,11 @@ function MenuPage() {
                             <img src={logo} alt="Error" className="logo"/>
                         </li>
                         <div className="nav-items">
-                            <li className="nav-item">{t('header.menu1')}</li>
-                            <li className="nav-item">{t('header.menu2')}</li>
-                            <li className="nav-item">{t('header.menu3')}</li>
-                            <li className="nav-item">{t('header.menu4')}</li>
-                            <li className="nav-item">{t('header.menu5')}</li>
+                            <li className="nav-item" onClick={() => handleMenuClick("main-section")}>{t('header.menu1')} </li>
+                            <li className="nav-item" onClick={() => handleMenuClick("projects")}>{t('header.menu2')}</li>
+                            <li className="nav-item" onClick={() => handleMenuClick("news")}>{t('header.menu3')}</li>
+                            <li className="nav-item" onClick={() => handleMenuClick("about")}>{t('header.menu4')}</li>
+                            <li className="nav-item" onClick={() => handleMenuClick("capability")}>{t('header.menu5')}</li>
                             <li className="nav-item">
                                 <Select
                                     labelInValue
@@ -67,7 +80,7 @@ function MenuPage() {
                                 />
 
                             </li>
-                            <li className="nav-item contact">{t('header.menu6')}</li>
+                            <li className="nav-item contact" onClick={() => handleMenuClick("connect")}>{t('header.menu6')}</li>
                             <li onClick={showDrawer} className="sidebar"><FontAwesomeIcon icon={faBars}/></li>
                         </div>
                     </ul>
