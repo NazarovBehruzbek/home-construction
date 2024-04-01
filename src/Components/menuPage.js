@@ -119,11 +119,11 @@ function MenuPage() {
                     </div>
                 </div>
                 <Drawer className="custom-drawer" onClose={onClose} open={open}>
-                    <div className="sub-menu-item">{t('header.menu1')}</div>
-                    <div className="sub-menu-item">{t('header.menu2')}</div>
-                    <div className="sub-menu-item">{t('header.menu3')}</div>
-                    <div className="sub-menu-item">{t('header.menu4')}</div>
-                    <div className="sub-menu-item">{t('header.menu5')}</div>
+                    <div className="sub-menu-item" onClick={() => handleMenuClick("main-section")}>{t('header.menu1')}>{t('header.menu1')}</div>
+                    <div className="sub-menu-item" onClick={() => handleMenuClick("project")}>{t('header.menu1')}>{t('header.menu2')}</div>
+                    <div className="sub-menu-item" onClick={() => handleMenuClick("news")}>{t('header.menu1')}>{t('header.menu3')}</div>
+                    <div className="sub-menu-item" onClick={() => handleMenuClick("about")}>{t('header.menu1')}>{t('header.menu4')}</div>
+                    <div className="sub-menu-item" onClick={() => handleMenuClick("capability")}>{t('header.menu1')}>{t('header.menu5')}</div>
                     <div className="sub-menu-item">
                         <Select
                             labelInValue
@@ -139,7 +139,7 @@ function MenuPage() {
                             ]}
                         />
                     </div>
-                    <div className="sub-menu-item contact">{t('header.menu6')}</div>
+                    <div className="sub-menu-item contact" onClick={() => handleMenuClick("connect")}>{t('header.menu1')}>{t('header.menu6')}</div>
                 </Drawer>
             </div>
         </section>

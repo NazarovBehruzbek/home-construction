@@ -1,18 +1,18 @@
 import React from "react";
-import { Swiper, SwiperSlide } from 'swiper/react';
+import {Swiper, SwiperSlide} from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/scrollbar';
 import './news.scss';
-import { FreeMode, Pagination,Scrollbar } from 'swiper/modules';
+import {FreeMode, Scrollbar} from 'swiper/modules';
 import yangiyil from "./images/newyear.png";
 import zakon from "./images/zakon.png";
 import qurilish from "./images/qurilish.webp";
 import {useTranslation} from "react-i18next";
 
-function News(){
+function News() {
     const {t} = useTranslation()
-    return(
+    return (
         <section>
             <div className="news" id="news">
                 <div className="container">
@@ -22,8 +22,8 @@ function News(){
                         spaceBetween={30}
                         freeMode={true}
                         loop={true}
-                        scrollbar={{ draggable: true }}
-                        modules={[FreeMode,Scrollbar]}
+                        scrollbar={{draggable: true}}
+                        modules={[FreeMode, Scrollbar]}
                         className="mySwiper"
                         breakpoints={{
                             // when window width is <= 768px
@@ -38,7 +38,8 @@ function News(){
                             },
                             1000: {
                                 slidesPerView: 3,
-                                spaceBetween: 20}
+                                spaceBetween: 20
+                            }
                         }}
                     >
                         <SwiperSlide>

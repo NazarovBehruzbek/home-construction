@@ -1,6 +1,6 @@
-import React, { useState} from 'react';
+import React from 'react';
 import "./foter.scss"
-import {Col, Form, Input, Row,message} from "antd";
+import {Col, Row,message} from "antd";
 import axios from "axios";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
@@ -80,13 +80,13 @@ function Foter(){
                                 </div>
 
                                 <div className="social-network">
-                                    <a href="https://t.me/Bexruzbek_Nazarov" target="_blank">
+                                    <a href="https://t.me/Bexruzbek_Nazarov" target="_blank"  rel="noopener">
                                         <div><FontAwesomeIcon icon={faFacebookF}/></div>
                                     </a>
-                                    <a href="https://www.instagram.com/nazarov_behruzbek" target="_blank">
+                                    <a href="https://www.instagram.com/nazarov_behruzbek" target="_blank"  rel="noopener">
                                         <div><FontAwesomeIcon icon={faInstagram}/></div>
                                     </a>
-                                    <a href="https://t.me/Bexruzbek_Nazarov" target="_blank">
+                                    <a href="https://t.me/Bexruzbek_Nazarov" target="_blank"  rel="noopener">
                                         <div><FontAwesomeIcon icon={faTelegram}/></div>
                                     </a>
                                 </div>
