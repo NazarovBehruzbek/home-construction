@@ -5,6 +5,25 @@ $fontstyle: eurostile-extended, sans-serif;
   padding: 0;
   box-sizing: border-box;
 }
+
+.login-form{
+  width: 400px;
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: #f2f2f2;
+  padding: 50px;
+  box-shadow: 5px 5px 10px gray;
+  text-align: center;
+
+}
+.danger-message{
+  color: red;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
 .foter-two-item{
   display: flex;
 }
@@ -104,8 +123,9 @@ $fontstyle: eurostile-extended, sans-serif;
 
   }
   .contact{
-    width: 32%;
+    width: 64%;
     margin: 8px 16px;
+    text-align: center;
   }
 }
 
@@ -133,14 +153,14 @@ $fontstyle: eurostile-extended, sans-serif;
 
 .video-item {
   width: 100%;
-  height: 600px;
+  height: 100vh;
   object-fit: cover;
   filter: brightness(70%)
 }
 .nav-video {
   .nav-container {
     position: absolute;
-    top: 140px;
+    top: 160px;
     left: 60px;
     max-width: calc(100% - 120px);
   }
@@ -170,7 +190,7 @@ $fontstyle: eurostile-extended, sans-serif;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: currentcolor;
-  max-width: 70%;
+  max-width: 80%;
   font-size: 80px;
   padding: 20px 0;
 }
@@ -223,7 +243,7 @@ padding: 50px 0;
   .container{
     width: 55%;
     position: relative;
-    padding-top: .6rem;
+    padding-top: .10rem;
     padding-bottom: .6rem;
     padding-left: 3rem;
     overflow: hidden;
@@ -354,9 +374,6 @@ padding: 50px 0;
 @media screen and (min-width: 330px) and (max-width: 600px) {
   .ant-drawer-content-wrapper {
     width: 250px !important
-  }
- .custom-drawer .contact{
-      width: 52% !important;
   }
   .sidebar {
     right: 0px;

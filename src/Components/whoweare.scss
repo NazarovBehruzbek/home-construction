@@ -5,6 +5,7 @@ $fontstyle: eurostile-extended, sans-serif;
   background-color: #F5F6F8;
   padding: 100px 0;
   padding-bottom: 160px;
+  box-sizing: border-box;
 }
 .who-images{
   position: relative;
@@ -43,11 +44,9 @@ $fontstyle: eurostile-extended, sans-serif;
     cursor: pointer;
     border: 1px solid $globalColor;
     transition: 0.3s;
-    letter-spacing: 1px;
-    line-height: 17px;
     color: $globalColor;
-    width: 50%;
     margin-top: 20px;
+    width: 50%;
   }
   .sub-partner:hover{
     background-color: $globalColor;
@@ -147,6 +146,10 @@ $fontstyle: eurostile-extended, sans-serif;
   }
 }
 @media screen and (max-width: 992px){
+  .who-back{
+    padding-top: 0;
+
+  }
 .who-images{
   display: flex;
   justify-content: center;
@@ -190,9 +193,14 @@ $fontstyle: eurostile-extended, sans-serif;
 }
 @media screen and (min-width: 330px) and (max-width: 650px) {
   .who-back{
-    padding: 30px 0;
+    padding: 0;
   }
   .who-info{
+    .container{
+      margin-left: 0;
+      width: 95%;
+      padding-left: 30px;
+    }
     .sub-title{
       font-size: 25px;
     }
@@ -204,8 +212,13 @@ $fontstyle: eurostile-extended, sans-serif;
       height: 20px;
       padding: 15px 0;
       line-height: 0px;
+      width: 50%;
 
     }
+    .stick{
+      display: none;
+    }
+
   }
   .who-back{
     padding-bottom: 0px;

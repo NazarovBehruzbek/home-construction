@@ -73,3 +73,10 @@ $fontstyle: eurostile-extended, sans-serif;
   cursor: pointer;
 
 }
+@media screen and (max-width: 992px) {
+  .news{
+    .container{
+      width: 95%;
+      margin: 0 auto;
+    }
+  }}

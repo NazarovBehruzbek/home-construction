@@ -10,7 +10,6 @@ import Component4 from "./Components/Component4";
 import News from "./Components/News";
 import Capabilities from "./Components/Capabilities";
 import Foter from "./Components/Foter";
-
 function App() {
     useEffect(() => {
         AOS.init({
@@ -21,7 +20,7 @@ function App() {
 
     }, [])
     return (
-        <React.Fragment>
+        <div>
             <MenuPage />
             <Component1 />
             <Component2/>
@@ -30,7 +29,7 @@ function App() {
             <Component4/>
             <Capabilities/>
             <Foter/>
-        </React.Fragment>
+        </div>
     );
 }
 

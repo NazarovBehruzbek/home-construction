@@ -78,13 +78,11 @@ function MenuPage() {
                                         { value: 'english', label: 'English', },
                                     ]}
                                 />
-
                             </li>
                             <li className="nav-item contact" onClick={() => handleMenuClick("connect")}>{t('header.menu6')}</li>
                             <li onClick={showDrawer} className="sidebar"><FontAwesomeIcon icon={faBars}/></li>
                         </div>
                     </ul>
-
                 </div>
             </div>
             <div className="nav-video">

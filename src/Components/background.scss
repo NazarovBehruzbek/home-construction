@@ -56,6 +56,8 @@ $fontstyle: eurostile-extended, sans-serif;
   .background {
     padding: 50px 0;
    .infos {
+    text-align: left;
+    width: 95%;
      .back-logo{
        width: 150px;
        height: 100px;
@@ -63,7 +65,7 @@ $fontstyle: eurostile-extended, sans-serif;
      }
      & h2{
        font-size: 25px;
-       width: 90%;
+       margin: 0
      }
      & p{;
        font-size: 10px;

@@ -104,7 +104,14 @@ $fontstyle: eurostile-extended, sans-serif;
 
 }
 @media screen and (max-width: 992px) {
+  .foter{
+    .container{
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
   .map-container{
+    margin-top: 20px;
     width: 100%;
     height: 400px;
     .map{
@@ -113,9 +120,7 @@ $fontstyle: eurostile-extended, sans-serif;
   }
 }
 @media  screen and (min-width: 330px) and (max-width: 600px){
-  .map-container{
-    margin-top: -5px;
-  }
+ 
   .foter{
     .info{
       padding: 30p 0;

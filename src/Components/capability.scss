@@ -3,7 +3,7 @@ $fontstyle: eurostile-extended, sans-serif;
 .capability{
   padding: 100px 0;
   & h2{
-    font-size: 20px;
+    font-size: 30px;
     text-align: center;
   }
   .cap-text{
@@ -44,5 +44,10 @@ $fontstyle: eurostile-extended, sans-serif;
       font-size: 18px;
       width: 95%;
     }
+  }
+}
+@media screen and (max-width: 992px) {
+  .capability{
+    padding: 100px 0;
   }
 }
