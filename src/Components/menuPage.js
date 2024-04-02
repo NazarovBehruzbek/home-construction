@@ -1,17 +1,20 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import logo from "./images/logo.png"
 import video from "./images/video.mp4"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
-import {Drawer, Select} from "antd";
-import {useTranslation} from "react-i18next";
+import { Drawer, Select, Button, Modal, Form, Input, message } from "antd";
+import { useTranslation } from "react-i18next";
+import axios from 'axios';
 
 function MenuPage() {
+    const [form] = Form.useForm();
     const [open, setOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
     const { t, i18n } = useTranslation();
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
     const showDrawer = () => {
         setOpen(true);
@@ -37,26 +40,57 @@ function MenuPage() {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
-        const handleMenuClick = (sectionId) => {
-            const section = document.getElementById(sectionId);
-            const menuHeight = document.querySelector('.nav').offsetHeight;
+    const handleMenuClick = (sectionId) => {
+        const section = document.getElementById(sectionId);
+        const menuHeight = document.querySelector('.nav').offsetHeight;
 
-            if (section) {
-                const offset = section.offsetTop - menuHeight;
-                window.scrollTo({
-                    top: offset,
-                    behavior: "smooth",
-                });
-            }
-            setOpen(false)
-        };
+        if (section) {
+            const offset = section.offsetTop - menuHeight;
+            window.scrollTo({
+                top: offset,
+                behavior: "smooth",
+            });
+        }
+        setOpen(false)
+    };
+    const showModal = () => {
+        setIsModalOpen(true);
+    };
+    const handleOk = () => {
+        setIsModalOpen(false);
+    };
+    const handleCancel = () => {
+        setIsModalOpen(false);
+    };
+    const onFinish = (values) => {
+        const telegram_bot_id = "7127598664:AAEXfRivlYDlHmGpewNnggFY9DWvgfZZ25o";
+        const chat_id = 6706091019;
+        const url = `https://api.telegram.org/bot${telegram_bot_id}/sendMessage`;
+        const method = 'POST';
+        const name = values.name;
+        const phone = values.phone;
+        const messageContent = `Ismi: ${name} \nTelefon raqami: ${phone}`;
+        axios({
+            url: url,
+            method: method,
+            data: {
+                "chat_id": chat_id,
+                "text": messageContent
+            },
+        }).then(res => {
+            message.success('Muvaffaqiyatli yuborildi')
+            form.resetFields();
+        }).catch(error => {
+            message.error('Yuborishda xatolik')
+        });
+    };
     return (
-        <section style={{position:'relative'}} id="main-section">
+        <section style={{ position: 'relative' }} id="main-section">
             <div className={`nav ${scrolled ? 'scrolled' : ''}`}>
                 <div className="container">
                     <ul className="nav-list">
                         <li className="nav-item nav-logo">
-                            <img src={logo} alt="Error" className="logo"/>
+                            <img src={logo} alt="Error" className="logo" />
                         </li>
                         <div className="nav-items">
                             <li className="nav-item" onClick={() => handleMenuClick("main-section")}>{t('header.menu1')} </li>
@@ -66,6 +100,7 @@ function MenuPage() {
                             <li className="nav-item" onClick={() => handleMenuClick("capability")}>{t('header.menu5')}</li>
                             <li className="nav-item">
                                 <Select
+                                    className='nav-select'
                                     labelInValue
                                     defaultValue={{
                                         value: i18n.language,
@@ -79,15 +114,15 @@ function MenuPage() {
                                     ]}
                                 />
                             </li>
-                            <li className="nav-item contact" onClick={() => handleMenuClick("connect")}>{t('header.menu6')}</li>
-                            <li onClick={showDrawer} className="sidebar"><FontAwesomeIcon icon={faBars}/></li>
+                            <li className="nav-item contact" onClick={showModal}>{t('header.menu6')}</li>
+                            <li onClick={showDrawer} className="sidebar"><FontAwesomeIcon icon={faBars} /></li>
                         </div>
                     </ul>
                 </div>
             </div>
             <div className="nav-video">
                 <video autoPlay={true} muted loop className="video-item">
-                    <source src={video} type="video/mp4"/>
+                    <source src={video} type="video/mp4" />
                 </video>
                 <div className="nav-container">
                     <div className="since">
@@ -95,25 +130,25 @@ function MenuPage() {
                         <div className="line"></div>
                     </div>
                     <h1 className="title" >
-                        {t('video.title1')} <br/> <span className="title1">{t('video.title2')}</span> {t('video.title3')}
+                        {t('video.title1')} <br /> <span className="title1">{t('video.title2')}</span> {t('video.title3')}
                     </h1>
                     <div className="see">
-                        <p className="see-item">{t('video.work')}
-                            <span className="icon-right"><FontAwesomeIcon icon={faChevronRight}/></span>
-                            <span className="icon-right"><FontAwesomeIcon icon={faChevronRight}/></span>
+                        <p className="see-item" onClick={() => handleMenuClick("projects")}>{t('video.work')}
+                            <span className="icon-right"><FontAwesomeIcon icon={faChevronRight} /></span>
+                            <span className="icon-right"><FontAwesomeIcon icon={faChevronRight} /></span>
                         </p>
-                        <p className="see-item">{t('video.join')}
-                            <span className="icon-right"><FontAwesomeIcon icon={faChevronRight}/></span>
-                            <span className="icon-right"><FontAwesomeIcon icon={faChevronRight}/></span>
+                        <p className="see-item" onClick={() => handleMenuClick("connect")}>{t('video.join')}
+                            <span className="icon-right"><FontAwesomeIcon icon={faChevronRight} /></span>
+                            <span className="icon-right"><FontAwesomeIcon icon={faChevronRight} /></span>
                         </p>
                     </div>
                 </div>
                 <div className="icon-item" >
                     <div className="icon-button">
-                        <FontAwesomeIcon icon={faChevronDown}/>
+                        <FontAwesomeIcon icon={faChevronDown} />
                     </div>
                     <div className="icon-button">
-                        <FontAwesomeIcon icon={faChevronDown}/>
+                        <FontAwesomeIcon icon={faChevronDown} />
                     </div>
                 </div>
                 <Drawer className="custom-drawer" onClose={onClose} open={open}>
@@ -137,9 +172,80 @@ function MenuPage() {
                             ]}
                         />
                     </div>
-                    <div className="sub-menu-item contact" onClick={() => handleMenuClick("connect")}>{t('header.menu6')}</div>
+                    <div className="sub-menu-item contact" onClick={showModal}>{t('header.menu6')}</div>
                 </Drawer>
             </div>
+            <>
+                <Modal title="BIZ SIZGA QO'NG'IROQ QILAMIZ" open={isModalOpen} onOk={handleOk} onCancel={handleCancel} width={400} footer={false}>
+                    <p>Raqamingizni qoldiring, biz sizga qo'ng'iroq qilamiz.</p>
+                    <Form
+                        name="basic"
+                        labelCol={{ span: 8 }}
+                        wrapperCol={{ span: 16 }}
+                        style={{ maxWidth: 600 }}
+                        initialValues={{ remember: true }}
+                        autoComplete="off"
+                        form={form}
+                        onFinish={onFinish}
+                   >
+                    
+                        <Form.Item
+                            name="username"
+                            rules={[
+                                {
+                                    required: true,
+                                    message: 'Please input your username!',
+                                },
+                            ]}
+                           wrapperCol={{span:24}}
+                           style={{marginTop:'10px'}}
+                        >
+                            <Input placeholder='Ismingizni kiriting' style={{height:'40px'}}/>
+                        </Form.Item>
+                        <Form.Item
+                            name="phone"
+                            rules={[
+                                {
+                                    required: true,
+                                    message: 'Please input your phonenumber!',
+                                },
+                            ]}
+                           wrapperCol={{span:24}}
+                           style={{marginTop:'10px',height:'40px'}}
+                        >
+                            <Input placeholder='Telefon raqam' style={{height:'40px'}}/>
+                        </Form.Item>
+                        <Form.Item
+                        name="bulim"
+                           wrapperCol={{span:24}}
+                        >
+                        <Select
+                            labelInValue
+                            defaultValue={{
+                                value: "Bo'lim",
+                              
+                            }}
+                    
+                            style={{ color: 'black',height:'40px' }}
+                            options={[
+                                { value: "Savdo bo'lim ", label: "Savdo bo'lim ", },
+                                { value: "Kadrlar bo'limi", label: "Kadrlar bo'limi", },
+                                { value: "Sotib olish bo'limi", label: "Sotib olish bo'limi", },
+                                { value: "Murojatlar bo'limi", label: "Murojatlar bo'limi", },
+                            ]}
+                        />
+                        </Form.Item>
+                        <Form.Item
+                            name="submit"
+                            wrapperCol={{span:24}}
+                           style={{marginTop:'10px'}}
+                        
+                        >
+                            <Button htmlType='submit' style={{width:'100%',backgroundColor:"#F35825",color:'white',height:'40px'}}>Yuborish</Button>
+                        </Form.Item>
+                    </Form>
+                </Modal>
+            </>
         </section>
     );
 }

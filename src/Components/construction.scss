@@ -111,6 +111,9 @@ $fontstyle: eurostile-extended, sans-serif;
     border: 2px solid $globalColor;
     padding: 6px 16px !important;
   }
+  .nav-select{
+    background-color:transparent
+  }
 .custom-drawer{
   z-index: 1200;
   .sub-menu-item{

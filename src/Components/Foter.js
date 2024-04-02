@@ -136,9 +136,10 @@ function Foter() {
                                                     <p>{t('foter.pnumber')}</p>
                                                     <input
                                                         id="phoneInput"
-                                                        type="text"
+                                                        type="tel"
                                                         required
-                                                        placeholder="+998908666051"
+                                                        pattern="[0-9]{10}"
+                                                        placeholder="998908666051"
                                                     />
                                                 </div>
                                                 <div className="form-item">
@@ -244,7 +245,6 @@ function Foter() {
                                 </YMaps>
                             </Col>
                         </Row>
-
                     )}
                 </div>
             </div>
